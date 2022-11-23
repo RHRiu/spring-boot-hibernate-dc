@@ -23,7 +23,7 @@ services:
     ports:
       - $SPRING_LOCAL_PORT:$SPRING_DOCKER_PORT
     environment:
-      - DATASOURCE_URL=jdbc:mysql://mysqldb:$MYSQLDB_DOCKER_PORT/$MYSQLDB_DATABASE?allowPublicKeyRetrieval=true&useSSL=false
+      - DATASOURCE_URL=${MYSQL_URL}
       - DATASOURCE_USER=${MYSQLDB_USER}
       - DATASOURCE_PASSWORD=${MYSQLDB_PASSWORD}
       - DATASOURCE_DIALECT=${DATABASE_DIALECT}
