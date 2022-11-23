@@ -6,5 +6,6 @@ COPY . .
 RUN mvn -Duser.home=/var/maven clean install
 #RUN gradle init
 
-CMD mvn -Duser.home=/var/maven spring-boot:run
+#CMD mvn -Duser.home=/var/maven spring-boot:run
 #CMD gradle bootRun
+CMD java -jar target/spring-boot-hibernate-dc-0.01.SNAPSHOT.jar
